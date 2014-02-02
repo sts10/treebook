@@ -5,10 +5,26 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <style>
+  	.navbar {
+  		/*background-color: #444;*/
+  	}
+  </style>
 </head>
 <body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">Treebook</a>
+				 <ul class="nav navbar-nav">
+				 	<li><%= link_to "All Statuses", statuses_path %></li>
+			</div>
+		</div>
+	</div>
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
